@@ -1,0 +1,13 @@
+<a href="https://ijlab.de" class="add-origin">Link</a>
+<script>
+(function () {
+	// add add-origin class on a element to modifie with origin url
+	var links = document.querySelectorAll('.add-origin');
+	if (links.length) {
+		var URL = document.location.href;
+		for (var i = 0; i < links.length; i++) {
+			links[i].setAttribute('href', links[i].getAttribute("href") + "?origin=" + URL);
+		}
+	}
+}());
+</script>
